@@ -11,7 +11,7 @@ bool EfficientPrimeCheck(ll n)
     if (n % 2 == 0)
         return false;
 
-    for (ll i = 3; i * i < n; i++)
+    for (ll i = 3; i * i < n; i=i+2)//skipping even numbers thats why i=i+2
     {
         if (n % i == 0)
             return false;
