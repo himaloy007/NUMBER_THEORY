@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll powerfunc(ll base,ll power)
+{
+    ll result=1;
+    while(power)
+    {
+        if(power%2==1)
+        {
+            result*=base;
+            power--;
+        }
+        else
+        {
+            base*=base;
+            power/=2;
+        }
+       
+    }
+    return result;
+}
+
+int main()
+{
+    ll m,n;
+    cin >> m >> n;
+    cout << powerfunc(m,n);
+}
